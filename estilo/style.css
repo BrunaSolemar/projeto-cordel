@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+    padding-top: 50px;
+    /*text-transform: uppercase; 
+    deixa todo o texto em letra maiúscula*/
+    font-variant: small-caps; /*também deixa em letra maiúscula, mas a primeira letra de cada parágrafo fica maior, é mais bonito*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*significa 10% da largura da tela, ou seja, se adapta ao tamanho das telas*/
+}
+
+header > p{
+    padding-bottom: 50px;
+}
+
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em; /*dá afastamento entre as linhas*/
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+
+}
+
+section > p {
+    padding-bottom: 2em; /*fez uma divisão entre os parágrafos de uma mesma seção*/
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(48, 46, 46);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.486);
+    background-attachment: fixed; /* EFEITO PARALLAX. Manteve o fundo da imagem fixo qnd rola a tela, ou seja, a imagem nao desce junto do texto, como se o texto tivesse passando por cima dela*/
+}
+
+section.imagem > p{ /*criei uma caixa preta transparente atrás do texto, pra destacar na imagem*/
+    background-color: rgba(0, 0, 0, 0.486);
+    display: inline-block;
+    padding: 5px;
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01{
+    background-image: url(../imagens/background001.jpg) ;
+    background-position: right center;
+    background-size: cover;
+}
+
+section#img02{
+    background-image: url(../imagens/background002.jpg);
+    background-size: cover;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
